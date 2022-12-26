@@ -3,12 +3,12 @@ from asciimatics.renderers import SpeechBubble
 from asciimatics.scene import Scene
 from asciimatics.screen import Screen
 from asciimatics.effects import Print
-from asciimatics.exceptions import ResizeScreenError
 from pyfiglet import Figlet
 import sys
 
 
 def animation(screen):
+    """Создание анимации."""
     scenes = []
 
     text = Figlet(font="banner", width=200).renderText("START GAME")
@@ -38,6 +38,7 @@ def animation(screen):
 
 
 def run_screensaver():
+    """Запуск заставки."""
     Screen.wrapper(animation)
 
 
